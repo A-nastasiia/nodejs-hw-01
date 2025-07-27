@@ -6,6 +6,6 @@ export const writeContacts = async (updatedContacts) => {
         const jsonData = JSON.stringify(updatedContacts, null, 2);
         await fs.writeFile(PATH_DB, jsonData, 'utf-8');
     } catch (err) {
-        console.error('Error whis saving contack', err.message);
+        console.error('Error whis saving contact', err.message);
     }
 };
