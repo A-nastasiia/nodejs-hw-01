@@ -6,7 +6,7 @@ const generateContacts = async (number) => {
     try {
         const existingContacts = await readContacts() || [];
         const newContacts = Array.from({ length: number }, () => createFakeContact());
-        const updateContacs = [...existingContacts, ...newContacts];
+        const updateContacts = [...existingContacts, ...newContacts];
         await writeContacts(updateContacs);
 
         console.log(`${number} contact successfully generated and added.`);
